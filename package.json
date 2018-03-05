@@ -1,0 +1,33 @@
+{
+  "name": "react-no-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lib": "babel ./src/lib --out-dir ./lib --copy-files",
+    "build": "browserify ./src/index.js -o ./build/bundle.js -t babelify",
+    "watch": "watchify ./src/index.js -o ./build/bundle.js -t babelify -v"
+  },
+  "keywords": [],
+  "author": "basherkev",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "postcss-scss": "^1.0.4"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-react-css-modules": "^3.3.3",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "watchify": "^3.10.0"
+  },
+  "description": "Minimal React configuration to support CSS Modules + Sass",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}
