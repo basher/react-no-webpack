@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-// import classNames from 'classnames';
 import styles from './WidgetSass.scss';
 
 export default class WidgetSass extends Component {
     render() {
         return (
-            <p styleName="widget">Widget + Sass</p>
+            <div className={styles.widget}>
+                <p>Widget + Sass nesting &amp; variables with PostCSS plugins.</p>
+            </div>
         );
     }
 }

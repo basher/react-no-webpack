@@ -4,12 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>React No Webpack</title>
+    <link rel="stylesheet" href="build/main.css">
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <p>This POC uses <a href="https://www.npmjs.com/package/babel-plugin-react-css-modules">https://www.npmjs.com/package/babel-plugin-react-css-modules</a> without Webpack or Gulp.</p>
+    <p>This POC demonstrates CSS Modules with a basic React setup.</p>
+    <ul>
+        <li>Using <a href="https://github.com/css-modules/css-modulesify">https://github.com/css-modules/css-modulesify</a>.</li>
+        <li>Unfortunately, <del>https://www.npmjs.com/package/babel-plugin-react-css-modules</del> did not work as documented.</li>
+        <li>ES6 transpiling &amp; module bundling are managed as NPM scripts inside <code>"package.json"</code> using <b>Browserify / Babelify</b>. No need for Webpack or Gulp.</li>
+    </ul>
     <div id="root"></div>
     <script src="build/bundle.js"></script>
   </body>
